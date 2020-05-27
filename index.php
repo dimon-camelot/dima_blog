@@ -26,7 +26,7 @@ $sql = "SELECT id, title, content, date_time, category_id FROM posts";
 
 $posts = makeSelectFromDB($link, $sql);
 
-var_dump($posts);
+
 
 // закрываем подключение
 mysqli_close($link);
@@ -65,18 +65,14 @@ mysqli_close($link);
     <div class="row">
         <div class="col-lg-8">
             <div class="content my-box">
-                <p>
-                    Какой-то пост
-                </p>
-                <p>
-                    Какой-то пост
-                </p>
-                <p>
-                    Какой-то пост
-                </p>
-                <p>
-                    Какой-то пост
-                </p>
+                <?php
+                foreach ($posts as $value) {
+                    echo "<h5>$value[title]</h5>";
+                    echo "<p>$value[date_time]</p>";
+                    echo "<p>$value[content]</p>";
+                    echo '<br>';
+                }
+                ?>
 
             </div>
         </div>

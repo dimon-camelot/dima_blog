@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8a7716f0-41be-4a53-851e-50e267a99623" name="Default Changelist" comment="исправил косяк, куда-то делось несколько первых строк индекс.пхп">
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+    <list default="true" id="8a7716f0-41be-4a53-851e-50e267a99623" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/newpost-page.php" beforeDir="false" afterPath="$PROJECT_DIR$/newpost-page.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,8 +44,16 @@
       <option name="presentableId" value="Default" />
       <updated>1590584069540</updated>
       <workItem from="1590584077239" duration="1865000" />
-      <workItem from="1590611313310" duration="1604000" />
+      <workItem from="1590611313310" duration="4887000" />
     </task>
+    <task id="LOCAL-00001" summary="исправил косяк, куда-то делось несколько первых строк индекс.пхп">
+      <created>1590613653595</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1590613653595</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -57,14 +64,18 @@
     <option name="LAST_COMMIT_MESSAGE" value="исправил косяк, куда-то делось несколько первых строк индекс.пхп" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-1366" y="16" key="CommitChangelistDialog2" timestamp="1590613233308">
+    <state x="-1366" y="16" key="CommitChangelistDialog2" timestamp="1590613653020">
       <screen x="-1920" y="-83" width="1920" height="993" />
     </state>
-    <state x="-1366" y="16" key="CommitChangelistDialog2/-1920.-83.1920.993/0.22.1280.778@-1920.-83.1920.993" timestamp="1590613233308" />
+    <state x="-1366" y="16" key="CommitChangelistDialog2/-1920.-83.1920.993/0.22.1280.778@-1920.-83.1920.993" timestamp="1590613653020" />
     <state x="-1451" y="52" key="SettingsEditor" timestamp="1590613173328">
       <screen x="-1920" y="-83" width="1920" height="993" />
     </state>
     <state x="-1451" y="52" key="SettingsEditor/-1920.-83.1920.993/0.22.1280.778@-1920.-83.1920.993" timestamp="1590613173328" />
+    <state x="-1360" y="153" key="Vcs.Push.Dialog.v2" timestamp="1590613657599">
+      <screen x="-1920" y="-83" width="1920" height="993" />
+    </state>
+    <state x="-1360" y="153" key="Vcs.Push.Dialog.v2/-1920.-83.1920.993/0.22.1280.778@-1920.-83.1920.993" timestamp="1590613657599" />
     <state x="-1171" y="337" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1590611941827">
       <screen x="-1920" y="-83" width="1920" height="993" />
     </state>

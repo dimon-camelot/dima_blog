@@ -1,3 +1,35 @@
+
+    $array = [];
+    while ($row = mysqli_fetch_assoc($result)) {
+        $array[] = $row;
+    }
+
+    return $array;
+}
+
+//подключаемся к БД
+$host = 'localhost'; // адрес сервера
+$database = 'dima_blog'; // имя базы данных
+$user = 'root'; // имя пользователя
+$password = ''; // пароль
+
+$link = mysqli_connect($host, $user, $password, $database)
+or die("Ошибка " . mysqli_error($link));
+
+// выполняем операции с базой данных
+
+$sql = "SELECT id, title, content, date_time, category_id FROM posts";
+
+$posts = makeSelectFromDB($link, $sql);
+
+var_dump($posts);
+
+// закрываем подключение
+mysqli_close($link);
+
+
+?>
+
 <!doctype html>
 <html>
 <head>

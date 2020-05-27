@@ -21,7 +21,7 @@ $currentTime = date('Y-m-d H:i:s');
 $host = 'localhost'; // адрес сервера
 $database = 'dima_blog'; // имя базы данных
 $user = 'root'; // имя пользователя
-$password = ''; // пароль
+$password = 'root'; // пароль
 
 $link = mysqli_connect($host, $user, $password, $database)
 or die("Ошибка " . mysqli_error($link));

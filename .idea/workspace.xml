@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8a7716f0-41be-4a53-851e-50e267a99623" name="Default Changelist" comment="" />
+    <list default="true" id="8a7716f0-41be-4a53-851e-50e267a99623" name="Default Changelist" comment="исправил косяк, куда-то делось несколько первых строк индекс.пхп">
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/newpost-page.php" beforeDir="false" afterPath="$PROJECT_DIR$/newpost-page.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ComposerSettings">
-    <execution />
+    <execution>
+      <executable />
+    </execution>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectId" id="1cUXInixGYA8vtcpbDw7tvTwMts" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -22,7 +30,9 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="SQL Dialects" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -35,10 +45,29 @@
       <option name="presentableId" value="Default" />
       <updated>1590584069540</updated>
       <workItem from="1590584077239" duration="1865000" />
+      <workItem from="1590611313310" duration="1604000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="исправил косяк, куда-то делось несколько первых строк индекс.пхп" />
+    <option name="LAST_COMMIT_MESSAGE" value="исправил косяк, куда-то делось несколько первых строк индекс.пхп" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-1366" y="16" key="CommitChangelistDialog2" timestamp="1590613233308">
+      <screen x="-1920" y="-83" width="1920" height="993" />
+    </state>
+    <state x="-1366" y="16" key="CommitChangelistDialog2/-1920.-83.1920.993/0.22.1280.778@-1920.-83.1920.993" timestamp="1590613233308" />
+    <state x="-1451" y="52" key="SettingsEditor" timestamp="1590613173328">
+      <screen x="-1920" y="-83" width="1920" height="993" />
+    </state>
+    <state x="-1451" y="52" key="SettingsEditor/-1920.-83.1920.993/0.22.1280.778@-1920.-83.1920.993" timestamp="1590613173328" />
+    <state x="-1171" y="337" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1590611941827">
+      <screen x="-1920" y="-83" width="1920" height="993" />
+    </state>
+    <state x="-1171" y="337" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1920.-83.1920.993/0.22.1280.778@-1920.-83.1920.993" timestamp="1590611941827" />
   </component>
 </project>

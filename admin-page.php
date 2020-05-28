@@ -1,4 +1,4 @@
-
+<?php include "bootstrap.php"; ?>
 <!doctype html>
 <html>
 <head>
@@ -36,14 +36,7 @@
 
         <div class="col-lg-4">
             <div class="sidebar my-box">
-                <h3>Категории:</h3>
-                <ul>
-                    <li>Категория 1</li>
-                    <li>Категория 1</li>
-                    <li>Категория 1</li>
-                    <li>Категория 1</li>
-                    <li>Категория 1</li>
-                </ul>
+              <?php include "categories_part.php"?>
             </div>
         </div>
 

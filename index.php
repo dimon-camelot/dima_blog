@@ -1,28 +1,15 @@
 <?php
 
-function makeSelectFromDB($dbLink, $sql)
-{
-    $result = mysqli_query($dbLink, $sql);
-    $array = [];
-    while ($row = mysqli_fetch_assoc($result)) {
-        $array[] = $row;
-    }
-
-    return $array;
-}
+include "bootstrap.php";
 
 //подключаемся к БД
-$host = 'localhost'; // адрес сервера
-$database = 'dima_blog'; // имя базы данных
-$user = 'root'; // имя пользователя
-$password = 'root'; // пароль
 
 $link = mysqli_connect($host, $user, $password, $database)
 or die("Ошибка " . mysqli_error($link));
 
 // достаем 4 поста из базы, начиная с самого свежего
 
-$sql = "SELECT id, title, content, date_time, category_id FROM posts ORDER BY date_time DESC LIMIT 3";
+$sql = "SELECT id, title, content, date_time, category_id FROM posts ORDER BY date_time DESC LIMIT 4";
 
 $posts = makeSelectFromDB($link, $sql);
 
@@ -82,12 +69,8 @@ mysqli_close($link);
 
         <div class="col-lg-4">
             <div class="sidebar my-box">
-                <h3>Категории:</h3>
+                <?php include "categories_part.php"; ?>
                 <ul>
-                    <li>Категория 1</li>
-                    <li>Категория 1</li>
-                    <li>Категория 1</li>
-                    <li>Категория 1</li>
                     <br>
                     <li><a href="admin_enter-page.php">Войти в админку</a></li>
                 </ul>

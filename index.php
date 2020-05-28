@@ -20,12 +20,11 @@ $password = 'root'; // пароль
 $link = mysqli_connect($host, $user, $password, $database)
 or die("Ошибка " . mysqli_error($link));
 
-// выполняем операции с базой данных
+// достаем посты из базы, начиная с самого свежего
 
-$sql = "SELECT id, title, content, date_time, category_id FROM posts";
+$sql = "SELECT id, title, content, date_time, category_id FROM posts ORDER BY date_time DESC";
 
 $posts = makeSelectFromDB($link, $sql);
-
 
 
 // закрываем подключение
@@ -65,12 +64,19 @@ mysqli_close($link);
     <div class="row">
         <div class="col-lg-8">
             <div class="content my-box">
+
                 <?php
+                //вывод постов
+                $i = 0;
                 foreach ($posts as $value) {
-                    echo "<h5>$value[title]</h5>";
-                    echo "<p>$value[date_time]</p>";
-                    echo "<p>$value[content]</p>";
-                    echo '<br>';
+
+                    if ($i < 4) { //Количество постов, отображаемых на странице
+                        $i++;
+                        echo "<h5>$value[title]</h5>";
+                        echo "<p>$value[date_time]</p>";
+                        echo "<p>$value[content]</p>";
+                        echo '<br>';
+                    }
                 }
                 ?>
 
@@ -84,7 +90,8 @@ mysqli_close($link);
                     <li>Категория 1</li>
                     <li>Категория 1</li>
                     <li>Категория 1</li>
-                    <li>Категория 1</li><br>
+                    <li>Категория 1</li>
+                    <br>
                     <li><a href="admin_enter-page.php">Войти в админку</a></li>
                 </ul>
             </div>

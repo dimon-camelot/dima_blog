@@ -72,9 +72,9 @@ mysqli_close($link);
 
                     if ($i < 4) { //Количество постов, отображаемых на странице
                         $i++;
-                        echo "<h5>$value[title]</h5>";
-                        echo "<p>$value[date_time]</p>";
-                        echo "<p>$value[content]</p>";
+                        echo "<h5>{$value['title']}</h5>";
+                        echo "<p>{$value['date_time']}</p>";
+                        echo "<p>{$value['content']}</p>";
                         echo '<br>';
                     }
                 }

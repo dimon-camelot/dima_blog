@@ -2,17 +2,36 @@
 
 include "src\bootstrap.php";
 
-//проверяем какой блок подключать в качестве основного
-$mainBlock = 'blocks\fresh_posts_block.php';
-if (isset($_GET['admin_enter'])) {
-    $mainBlock = 'blocks\admin_enter_block.php';
+// Доступные страницы
+
+$availablePages = [
+
+    // Админка
+    'admin_enter' => 'blocks\main\blocks\admin_enter_block.php',
+    'admin_home' => 'blocks\main\blocks\admin_block.php',
+    'admin_new_post' => 'blocks\main\blocks\new_post_block.php',
+
+    // Пользовательская часть
+    'fresh_posts' => 'fresh_posts_block.php'
+
+];
+
+// Выбираем конкретную страницу
+
+$mainBlock = $availablePages['fresh_posts'];
+
+if (isset($_GET['page'])) {
+    $requestedPage = $_GET['page'];
+
+    if (array_key_exists($requestedPage, $availablePages)) {
+        $mainBlock = $availablePages[$requestedPage];
+    } else {
+        header('HTTP/1.1 404 Not Found');
+        echo "Страница, которую вы запрашиваете, не найдена";
+        die();
+    }
 }
-if (isset($_GET['admin_block'])) {
-    $mainBlock = 'blocks\admin_block.php';
-}
-if (isset($_GET['newpost'])) {
-    $mainBlock = 'blocks\new_post_block.php';
-}
+
 ?>
 
 <!doctype html>
@@ -46,7 +65,7 @@ if (isset($_GET['newpost'])) {
     <div class="row">
         <div class="col-lg-8">
             <div class="content my-box">
-                <?php include "$mainBlock";?>
+                <?php include $mainBlock; ?>
 
             </div>
         </div>

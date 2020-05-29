@@ -14,4 +14,4 @@ if ($_POST) {
 }
 ?>
 <br>
-<a href="../index.php?admin_block">Вернуться в Админку.</a>
+<a href="../index.php?page=admin_home">Вернуться в Админку.</a>

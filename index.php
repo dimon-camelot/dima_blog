@@ -1,6 +1,6 @@
 <?php
 
-include "bootstrap.php";
+include "src\bootstrap.php";
 
 //подключаемся к БД
 
@@ -12,11 +12,6 @@ or die("Ошибка " . mysqli_error($link));
 $sql = "SELECT id, title, content, date_time, category_id FROM posts ORDER BY date_time DESC LIMIT 4";
 
 $posts = makeSelectFromDB($link, $sql);
-
-
-// закрываем подключение
-mysqli_close($link);
-
 
 ?>
 

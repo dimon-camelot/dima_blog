@@ -1,4 +1,4 @@
-<?php include "bootstrap.php"; ?>
+<?php include "src\bootstrap.php"; ?>
 <!doctype html>
 <html>
 <head>

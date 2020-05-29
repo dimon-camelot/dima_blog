@@ -1,9 +1,5 @@
 <?php
 
-//подключаемся к БД
-$link = mysqli_connect($host, $user, $password, $database)
-or die("Ошибка " . mysqli_error($link));
-
 // Достаем данные по категориям
 
 $sql = "SELECT id, title FROM categories";

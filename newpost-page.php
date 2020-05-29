@@ -1,30 +1,8 @@
 <?php
 
-function makeSelectFromDB($dbLink, $sql)
-{
-    $result = mysqli_query($dbLink, $sql);
+include "src\bootstrap.php";
 
-    $array = [];
-    while ($row = mysqli_fetch_assoc($result)) {
-        $array[] = $row;
-    }
-
-    return $array;
-}
-
-date_default_timezone_set("Europe/Moscow");
-$currentTime = date('Y-m-d H:i:s');
-
-
-
-//подключаемся к БД
-$host = 'localhost'; // адрес сервера
-$database = 'dima_blog'; // имя базы данных
-$user = 'root'; // имя пользователя
-$password = 'root'; // пароль
-
-$link = mysqli_connect($host, $user, $password, $database)
-or die("Ошибка " . mysqli_error($link));
+$currentTime = date('Y-m-d H:i:s'); //устанавливаем формат даты_времени
 
 // выполняем операции с базой данных
 
@@ -45,8 +23,7 @@ if($_POST) {
 }
 
 
-// закрываем подключение
-mysqli_close($link);
+
 
 ?>
 <!doctype html>
@@ -105,16 +82,7 @@ mysqli_close($link);
 
         <div class="col-lg-4">
             <div class="sidebar my-box">
-                <h3>Категории:</h3>
-                <ul>
-                    <?php
-
-                    foreach ($categories as $category) {
-                        echo "<li>{$category['title']}</li>";
-                    }
-                    ?>
-
-                </ul>
+               <?php include "categories_part.php"?>
             </div>
         </div>
 

@@ -6,7 +6,7 @@ $enteredLogin = trim(strip_tags($_POST['login']));
 $enteredPassword = trim(strip_tags($_POST['password']));
 
 if (($enteredLogin == $login) AND ($enteredPassword == $password)) {
-    header("Location: admin-page.php"); exit;
+    header("Location: index.php?admin_block"); exit;
 } else {
     echo 'Неправильная пара логин-пароль!';
 }

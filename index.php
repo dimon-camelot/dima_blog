@@ -1,4 +1,16 @@
-<?php include "src\bootstrap.php"; ?>
+<?php
+
+include "src\bootstrap.php";
+
+//проверяем какой блок подключать в качестве основного
+$mainBlock = 'blocks\fresh_posts_block.php';
+if (isset($_GET['admin_enter'])) {
+    $mainBlock = 'blocks\admin_enter_block.php';
+}
+if (isset($_GET['admin_block'])) {
+    $mainBlock = 'blocks\admin_block.php';
+}
+?>
 
 <!doctype html>
 <html>
@@ -31,16 +43,17 @@
     <div class="row">
         <div class="col-lg-8">
             <div class="content my-box">
-                <?php include "blocks/fresh_posts.php"?>
+                <?php include "$mainBlock";?>
+
             </div>
         </div>
 
         <div class="col-lg-4">
             <div class="sidebar my-box">
-                <?php include "blocks/categories_part.php"; ?>
+                <?php include "blocks/categories_block.php"; ?>
                 <ul>
                     <br>
-                    <li><a href="admin_enter-page.php">Войти в админку</a></li>
+                    <li><a href="?admin_enter">Войти в админку</a></li>
                 </ul>
             </div>
         </div>

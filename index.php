@@ -10,6 +10,9 @@ if (isset($_GET['admin_enter'])) {
 if (isset($_GET['admin_block'])) {
     $mainBlock = 'blocks\admin_block.php';
 }
+if (isset($_GET['newpost'])) {
+    $mainBlock = 'blocks\new_post_block.php';
+}
 ?>
 
 <!doctype html>

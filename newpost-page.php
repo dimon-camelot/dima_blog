@@ -82,7 +82,7 @@ if($_POST) {
 
         <div class="col-lg-4">
             <div class="sidebar my-box">
-               <?php include "categories_part.php"?>
+               <?php include "blocks/categories_part.php" ?>
             </div>
         </div>
 

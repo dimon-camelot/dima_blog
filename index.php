@@ -1,19 +1,4 @@
-<?php
-
-include "src\bootstrap.php";
-
-//подключаемся к БД
-
-$link = mysqli_connect($host, $user, $password, $database)
-or die("Ошибка " . mysqli_error($link));
-
-// достаем 4 поста из базы, начиная с самого свежего
-
-$sql = "SELECT id, title, content, date_time, category_id FROM posts ORDER BY date_time DESC LIMIT 4";
-
-$posts = makeSelectFromDB($link, $sql);
-
-?>
+<?php include "src\bootstrap.php"; ?>
 
 <!doctype html>
 <html>
@@ -46,25 +31,13 @@ $posts = makeSelectFromDB($link, $sql);
     <div class="row">
         <div class="col-lg-8">
             <div class="content my-box">
-
-                <?php
-                //вывод постов
-                $i = 0;
-                foreach ($posts as $value) {
-
-                    echo "<h5>{$value['title']}</h5>";
-                    echo "<p>{$value['date_time']}</p>";
-                    echo "<p>{$value['content']}</p>";
-                    echo '<br>';
-                }
-                ?>
-
+                <?php include "blocks/fresh_posts.php"?>
             </div>
         </div>
 
         <div class="col-lg-4">
             <div class="sidebar my-box">
-                <?php include "categories_part.php"; ?>
+                <?php include "blocks/categories_part.php"; ?>
                 <ul>
                     <br>
                     <li><a href="admin_enter-page.php">Войти в админку</a></li>

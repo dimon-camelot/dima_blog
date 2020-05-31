@@ -1,17 +1,17 @@
 <?php
 
-include "src\bootstrap.php";
+include "src/bootstrap.php";
 
 //проверяем какой блок подключать в качестве основного
-$mainBlock = 'blocks\fresh_posts_block.php';
+$mainBlock = 'blocks/fresh_posts_block.php';
 if (isset($_GET['admin_enter'])) {
-    $mainBlock = 'blocks\admin_enter_block.php';
+    $mainBlock = 'blocks/admin_enter_block.php';
 }
 if (isset($_GET['admin_block'])) {
-    $mainBlock = 'blocks\admin_block.php';
+    $mainBlock = 'blocks/admin_block.php';
 }
 if (isset($_GET['newpost'])) {
-    $mainBlock = 'blocks\new_post_block.php';
+    $mainBlock = 'blocks/new_post_block.php';
 }
 ?>
 

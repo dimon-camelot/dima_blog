@@ -1,9 +1,10 @@
 <?php
 
-if(isset($_SESSION['isAdmin'])){
-    var_dump($_SESSION['isAdmin']);
+if((isset($_SESSION['isAdmin'])) && ($_SESSION["isAdmin"])){
+    echo "Вы вошли с правами администратора.";
 } else {
     die('Вы не админ!');
+
 }
 
 

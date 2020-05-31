@@ -1,5 +1,5 @@
 <?php
-include "bootstrap.php";
+include "src/bootstrap.php";
 
 if ($_POST) {
 
@@ -14,4 +14,4 @@ if ($_POST) {
 }
 ?>
 <br>
-<a href="../index.php?admin_block">Вернуться в Админку.</a>
+<a href="index.php?admin_block">Вернуться в Админку.</a>

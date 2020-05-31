@@ -13,6 +13,11 @@ if (isset($_GET['admin_block'])) {
 if (isset($_GET['newpost'])) {
     $mainBlock = 'blocks/new_post_block.php';
 }
+
+if (isset($_GET['post_block'])) {
+    $mainBlock = 'blocks/post_block.php';
+}
+
 ?>
 
 <!doctype html>
@@ -47,7 +52,6 @@ if (isset($_GET['newpost'])) {
         <div class="col-lg-8">
             <div class="content my-box">
                 <?php include "$mainBlock";?>
-
             </div>
         </div>
 

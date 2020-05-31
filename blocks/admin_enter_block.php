@@ -2,7 +2,7 @@
 
 if((isset($_SESSION['isAdmin'])) && ($_SESSION["isAdmin"])){
     header("Location: index.php?admin_block"); exit;
-} 
+}
 ?>
 
 <h1>Авторизуйтесь пожалуйста!</h1>

@@ -1,5 +1,6 @@
 <?php
 
+
 // Достаем данные по категориям
 
 $sql = "SELECT id, title FROM categories";
@@ -15,7 +16,7 @@ echo "<ul>";
 //Рисуем категории
 
 foreach ($categories as $category) {
-    echo "<li>{$category['title']}</li>";
+    echo "<li><a href='index.php?bycategory_block&category_id={$category['id']}'>{$category['title']}</a></li>";
 }
 
 echo "</ul>";

@@ -18,6 +18,10 @@ if (isset($_GET['post_block'])) {
     $mainBlock = 'blocks/post_block.php';
 }
 
+if (isset($_GET['bycategory_block'])) {
+    $mainBlock = 'blocks/bycategory_block.php';
+}
+
 ?>
 
 <!doctype html>

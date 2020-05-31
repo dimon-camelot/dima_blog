@@ -9,7 +9,7 @@ $categories = makeSelectFromDB($link, $sql);
 
 ?>
 
-<form method="post" action="src/newpost_creation.php">
+<form method="post" action="newpost_creation.php">
     <h4>Выберите категорию</h4>
     <select name="category">
         <?php

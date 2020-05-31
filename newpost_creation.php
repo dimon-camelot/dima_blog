@@ -9,7 +9,7 @@ if ($_POST) {
     if (mysqli_query($link, $sqlInsert)) {
         echo "Успешно создана новая запись";
             } else {
-        echo "Ошибка: " . $sql . "<br>" . mysqli_error($link);
+        echo "Ошибка: " . $sqlInsert . "<br>" . mysqli_error($link);
     }
 }
 ?>

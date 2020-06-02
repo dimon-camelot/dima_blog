@@ -1,22 +1,26 @@
 <?php
 
-include "bootstrap.php";
+include "src/bootstrap.php";
 
-//подключаемся к БД
+//проверяем какой блок подключать в качестве основного
+$mainBlock = 'blocks/fresh_posts_block.php';
+if (isset($_GET['admin_enter'])) {
+    $mainBlock = 'blocks/admin_enter_block.php';
+}
+if (isset($_GET['admin_block'])) {
+    $mainBlock = 'blocks/admin_block.php';
+}
+if (isset($_GET['newpost'])) {
+    $mainBlock = 'blocks/new_post_block.php';
+}
 
-$link = mysqli_connect($host, $user, $password, $database)
-or die("Ошибка " . mysqli_error($link));
+if (isset($_GET['post_block'])) {
+    $mainBlock = 'blocks/post_block.php';
+}
 
-// достаем 4 поста из базы, начиная с самого свежего
-
-$sql = "SELECT id, title, content, date_time, category_id FROM posts ORDER BY date_time DESC LIMIT 4";
-
-$posts = makeSelectFromDB($link, $sql);
-
-
-// закрываем подключение
-mysqli_close($link);
-
+if (isset($_GET['bycategory_block'])) {
+    $mainBlock = 'blocks/bycategory_block.php';
+}
 
 ?>
 
@@ -51,28 +55,16 @@ mysqli_close($link);
     <div class="row">
         <div class="col-lg-8">
             <div class="content my-box">
-
-                <?php
-                //вывод постов
-                $i = 0;
-                foreach ($posts as $value) {
-
-                    echo "<h5>{$value['title']}</h5>";
-                    echo "<p>{$value['date_time']}</p>";
-                    echo "<p>{$value['content']}</p>";
-                    echo '<br>';
-                }
-                ?>
-
+                <?php include "$mainBlock";?>
             </div>
         </div>
 
         <div class="col-lg-4">
             <div class="sidebar my-box">
-                <?php include "categories_part.php"; ?>
+                <?php include "blocks/categories_block.php"; ?>
                 <ul>
                     <br>
-                    <li><a href="admin_enter-page.php">Войти в админку</a></li>
+                    <li><a href="?admin_enter">Войти в админку</a></li>
                 </ul>
             </div>
         </div>

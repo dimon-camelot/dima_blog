@@ -1,8 +1,5 @@
 <?php
 
-//подключаемся к БД
-$link = mysqli_connect($host, $user, $password, $database)
-or die("Ошибка " . mysqli_error($link));
 
 // Достаем данные по категориям
 
@@ -19,7 +16,7 @@ echo "<ul>";
 //Рисуем категории
 
 foreach ($categories as $category) {
-    echo "<li>{$category['title']}</li>";
+    echo "<li><a href='index.php?bycategory_block&category_id={$category['id']}'>{$category['title']}</a></li>";
 }
 
 echo "</ul>";

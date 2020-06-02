@@ -47,7 +47,7 @@ if (isset($_GET['bycategory_block'])) {
     <div class="row">
         <div class="col-lg-12">
             <div class="header my-box">
-                <h1>Dima Blog</h1>
+                <h1><a href="index.php" title="На главную">Dima Blog</a></h1>
             </div>
         </div>
     </div>
